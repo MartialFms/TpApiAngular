@@ -1,0 +1,90 @@
+<div class="lg:px-8 md:px-6 px-4 py-8 ng-star-inserted">
+  <div class="surface-card shadow-2 border-round p-4">
+    <div class="flex justify-content-between align-items-center mb-5">
+      <span class="text-xl text-900 font-medium">Training List</span>
+
+
+      <div *ngFor="let category of listCategory"class="list-none p-0 m-0">
+      <button  (click)="getTrainingsByCategory(category)">{{category.name}}</button>
+    </div>
+
+
+
+      <div>
+        <button
+          pbutton=""
+          pripple=""
+          icon="pi pi-ellipsis-v"
+          class="p-element p-ripple p-button-text p-button-plain p-button-rounded p-button p-component p-button-icon-only"
+        >
+          <span class="p-button-icon pi pi-ellipsis-v" aria-hidden="true"></span
+          ><span aria-hidden="true" class="p-button-label">&nbsp;</span
+          ><span
+            class="p-ink"
+            style="height: 48px; width: 48px; top: -4.79996px; left: -3.20007px"
+          ></span></button
+        ><p-menu class="p-element ng-tns-c64-29 ng-star-inserted"
+          ><!----></p-menu
+        >
+      </div>
+    </div>
+
+
+
+    <ul *ngFor="let training of listTrainings"class="list-none p-0 m-0">
+
+
+      <li
+        class="flex flex-column sm:flex-row sm:justify-content-between sm:align-items-center mb-5"
+      >
+
+
+        <div class="flex align-items-center">
+          <span
+            class="block mr-3 surface-200 border-radius: 10px inline-flex justify-content-center align-items-center"
+            style="width: 58px; height: 58px; border-radius: 10px"
+            ><img
+              src="assets/images/training/{{training.photoName}}"
+              style="width: 30px; height: 30px"
+          /></span>
+          <div>
+            <div class="text-900 font-medium text-xl mb-2">{{training.name}}</div>
+            <div class="flex align-items-center">
+              <i class="pi pi-apple text-600 mr-2"></i
+              ><span class="text-600">{{training.category.name}}</span
+              ><span
+                class="inline-flex p-1 bg-green-100 text-green-600 font-medium text-sm border-round ml-3"
+                >{{training.price}} €</span
+              >
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sm:text-right mt-3 md:mt-0">
+          <p-rating
+          [readonly]="true"
+          [stars]=4
+            class="p-element ng-untouched ng-pristine ng-valid"
+            ><div class="p-rating p-readonly">
+              <!----><span
+                class="p-rating-icon ng-star-inserted pi pi-star-fill"
+              ></span
+              ><span
+                class="p-rating-icon ng-star-inserted pi pi-star-fill"
+              ></span
+              ><span
+                class="p-rating-icon ng-star-inserted pi pi-star-fill"
+              ></span
+              ><span class="p-rating-icon pi pi-star ng-star-inserted"></span
+              ><span class="p-rating-icon pi pi-star ng-star-inserted"></span
+              ><!---->
+            </div></p-rating
+          >
+          <div class="text-sm text-600 mt-2">10K Reviews</div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>

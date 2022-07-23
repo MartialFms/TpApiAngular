@@ -1,0 +1,24 @@
+<div class="text-center mb-2 text-white">
+  <img src="assets/images/illustration/logo.png" alt="Image" class="mt-2">
+  <div class="text-900 text-3xl font-medium mb-1 text-white">Welcome</div>
+  <span class="text-400 font-medium line-height-3"><i>Don't have an account?</i></span>
+  <a class="font-medium no-underline ml-2 text-blue-200 cursor-pointer" (click)="activeIndex=true">Create today!</a>
+</div>
+
+<div>
+  <label for="email1" class="block text-900 text-white font-medium mb-2" ><i class="pi pi-user"></i> Email</label>
+  <input id="email1" type="text" pInputText class="w-full mb-3">
+
+  <label for="password1" class="block text-900 text-white font-medium mb-2 " ><i class="pi pi-lock"></i> Password</label>
+  <input id="password1" type="password" pInputText class="w-full mb-3">
+
+  <div class="flex align-items-center justify-content-between mb-6">
+      <div class="flex align-items-center">
+          <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
+          <label for="rememberme1" class="text-900 text-white">Remember me</label>
+      </div>
+      <a class="font-medium no-underline ml-2 text-purple-200 text-right cursor-pointer">Forgot password?</a>
+  </div>
+
+  <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full p-button-danger px-3"></button>
+</div>

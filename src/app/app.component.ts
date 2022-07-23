@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'trainings-angular';
+
+  displayModal: boolean = false;
+
+  showLoginModal() {
+      this.displayModal = true;
+  }
 }
